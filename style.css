@@ -1,0 +1,141 @@
+* {
+   margin: 0;
+   padding:0px;
+}
+
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --gray500: #343A40;
+    --gray400: #495057;
+    --darkblue300: #0A3871;
+
+    --inter: "Inter", sans-serif;
+}
+
+
+body {
+    background-color: #E5E5E5;
+    box-sizing: border-box;
+}
+
+
+.sidebarDireita {
+    text-align: center;
+    background-color: #ffffff;
+    width:30%;
+    height: 90vh;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+
+    /* -webkit-box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.25); */
+    /* -moz-box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.25); */
+    /* box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.25); */
+    
+    border-radius: 25px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sidebarDireita, h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    color: var(--gray500);
+    line-height: 1.2;
+}
+
+.sidebarDireita, p {
+    color: var(--gray400);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    margin-top:16px;
+    
+    line-height: 1.5;
+}
+
+.sidebarEsquerda {
+    display: flex;
+    flex-direction: column;
+    gap:70%;
+    width:70%;
+    margin:30px;
+}
+
+input {
+    background-color: transparent;
+    border: 0;
+    color: var(--darkblue300);
+    font-family: var(--inter);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+input::placeholder {
+    color: var(--darkblue300);
+    font-family: var(--inter);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+input:focus {outline: none;}
+
+.crip {
+    background-color: #D8DFE8;
+    text-align: center;
+    padding: 24px 90px 24px 90px;
+    text-decoration: none;
+    border-radius: 24px;
+    border: solid 1px var(--darkblue300);
+    font-family: var(--inter);
+    font-size:1rem;
+    font-weight: 400;
+    color: var(--darkblue300);
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap:25%;
+    
+}
+
+.conteudo {
+    display:flex;
+    justify-content: flex-end;
+    margin: -2% 10%;
+}
+
+.logoAlura {
+    margin:20px 20px 0px 0px;
+}
+
+@media (max-width:1350px) {
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .sidebarEsquerda {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .sidebarDireita {
+        width:100%;
+        height: auto;
+    }
+
+    #sidebarConteudo img {
+        width:0px;
+    }
+}
+
+
+@media (max-width:720px) {
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+}
